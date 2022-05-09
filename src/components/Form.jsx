@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 function Form(props) {
   const [name, setName] = useState('');
+  const [title, setTitle] = useState('what changes need to be done?')
 
   function handleSubmit(e) {
     e.preventDefault();
     if (!name.trim()) {
       return;
     }
-    props.addTask(name);
-    setName('');
+    setTitle(name);
   }
 
 
@@ -19,9 +19,9 @@ function Form(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2 className="label-wrapper">
+      <h2 className="label-wrapper" id='label'>
         <label htmlFor="new-todo-input" className="label__lg">
-          What needs to be done?
+         {title}
         </label>
       </h2>
 

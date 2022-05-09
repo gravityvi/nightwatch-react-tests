@@ -5,7 +5,11 @@ describe('form test', function() {
       component = await browser.mountComponent('../../src/components/Form.jsx');
     });
   
-    it('should render functional components without error', async function() {
+    it('render form component and change the title', async function() {
       await browser.expect(component).to.be.visible;
+       
+      return browser.setValue('#new-todo-input', 'Barn owl')
+        .click('button')
+        .assert.containsText('#label', 'Barn owl')
     })
   })

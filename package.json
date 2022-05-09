@@ -9,7 +9,9 @@
   "author": "Ravi Sawlani",
   "license": "ISC",
   "dependencies": {
-    "@nightwatch/react": "^0.1.3"
+    "@nightwatch/react": "^0.1.3",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "geckodriver": "^3.0.1"
