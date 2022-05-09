@@ -10,6 +10,6 @@ describe('form test', function() {
        
       return browser.setValue('#new-todo-input', 'Barn owl')
         .click('button')
-        .assert.containsText('#label', 'Barn owl')
+        .assert.textContains('#label', 'Barn owl')
     })
   })
